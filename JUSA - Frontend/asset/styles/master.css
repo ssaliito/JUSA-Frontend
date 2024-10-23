@@ -361,11 +361,13 @@ body {
             gap: 10px;
             width: 100%;
             overflow-y: auto;
+            background-color: #ffffff;
 
             input, select {
                 height: 30px;
                 border-radius: 7px;
                 border: 1px #000000;
+                background-color: #fafafa;
             }
 
             .save-btn {

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/asset/styles/master.css">
+    <script scr="/asset/js/jquery-3.7.1.min.js"></script>
+    <script scr="/asset/js/sweetalert2.all.min.js"></script>
+</head>
+
+<body>
+    <main class="dashboard">
+        <!-- Inicio barra de navegacion -->
+        <nav class="sidebar " id="sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-item">
+                    Inicio
+                </div>
+                <div class="sidebar-item">
+                    Usuarios
+                    <div class="submenu">
+                        <div class="submenu-item">Crear</div>
+                    </div>
+                </div>
+                <div class="sidebar-item">
+                    Finanzas
+                    <div class="submenu">
+                        <div class="submenu-item">Crear</div>
+                    </div>
+                </div>
+                <div class="sidebar-item">
+                    Fechas
+                    <div class="submenu">
+                        <div class="submenu-item">Crear</div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Fin barra de navegacion -->
+
+        <!-- Inicio contenido principal -->
+        <div class="main-content" id="main-content">
+            <!-- Inicio contenido cabecera -->
+            <header class="header">
+                <button class="menu-toggle" id="menu-toggle">☰</button>
+                <div class="header-title">Nombre del módulo</div>
+                <div class="user-info">
+                    <img src="/asset/img/no-photo.png" class="user-photo" id="user-photo" alt="">
+                    <div class="dropdown" id="dropdown">
+                        <div class="dropdown-menu">
+                            <button class="dropdown-item">Nombre del usuario</button>
+                            <button class="dropdown-item">Perfil</button>
+                            <button class="dropdown-item">Cerrar sesión</button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- Fin contenido cabecera -->
+
+            <!-- Inicio área de contenido -->
+            <div class="content">
+                <!-- Aqui van listadas las tarjetas -->
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Nombre Completo: Salome Velasquez</h3>
+                        <p>Nombre de usuario: Ssaliito</p>
+                        <p>Correo Electronico: salomevelasquez@gmail.com</p>
+                        <p>Número de telefono: 3218520874</p>
+                        <p>Rol: Usuario</p>
+                        <p>Estado: Activo</p>
+                    </div>
+                    <div class="card-actions">
+                        <button class="edit-btn">Editar</button>
+                        <button class="delete-btn">Eliminar</button>
+                    </div>
+                </div>
+                <!-- Fin listado de las tarjetas -->
+
+                <!-- Inicio modal crear -->
+                <div class="modal-create" id="modal-create">
+                    <div class="modal-content">
+                        <span class="close-btn" id="close-btn-create">&times;</span>
+                        <h2>Formulario crear</h2>
+                        <form id="formCreate">
+                            <input type="text" name="name" placeholder="Nombre Completo">
+                            <input type="text" name="userName" placeholder="Nombre de Usuario">
+                            <input type="password" name="keyword" placeholder="*******" id="contraseña">
+                            <select name="rol">
+                                <option value="Usuario" selected>Usuario</option>
+                                <option value="Usuario">Administrador</option>
+                            </select>
+                            <input type="email" name="email" placeholder="xxxxx@xxxx.com">
+                            <input type="text" name="state" value="Activo" hidden>
+                            <input type="number" name="phoneNumber" placeholder="Numero de telefono">
+                            <button type="submit">Guardar</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- Fin modales -->
+
+                <!-- Inicio modal editar -->
+                <div class="modal-edit" id="modal-edit">
+                    <div class="modal-content">
+                        <span class="close-btn-edit" id="close-btn-edit">&times;</span>
+                        <h2>Formulario editar</h2>
+                        <form id="formEdit">
+                            <input type="text" name="editFullName" id="editID" hidden>
+
+                            <div>
+                                <label for="editFullName">Nombre Completo</label>
+                                <input type="text" name="fullName" id="editFullName" placeholder="Nombre Completo">
+                            </div>
+
+                            <div>
+                                <label for="editUserName">
+                                    <input type="text" name="userName" id="editUserName"
+                                        placeholder="Nombre de Usuario">
+                                </label>
+                            </div>
+
+                            <div>
+                                <label for="editEmail"></label>
+                                <input type="email" name="email" id="editEmail" placeholder="xxxxx@xxxx.com">
+                            </div>
+
+                            <div>
+                                <label for="editPhoneNumber"></label>
+                                <input type="number" name="phoneNumber" id="editPhoneNumber"
+                                    placeholder="Numero de telefono">
+                            </div>
+
+                            <input type="text" name="state" value="Activo">
+
+                            <div class="modal-actions">
+                                <button class="save-btn">Actualizar</button>
+                                <button class="cancel-btn">Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Fin modal editar -->
+
+            </div>
+            <!-- Fin área de contenido -->
+
+        </div>
+        <!-- Fin  contenido principal -->
+    </main>
+</body>
+<script src="/asset/js/script.js"></script>
+
+</html>
